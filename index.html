@@ -1,3 +1,6 @@
+Maxim badikov portfolio · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,24 +192,18 @@
   /* ── COLLAGE LAYOUT ── */
   main {
     padding-top: 64px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
   }
  
   .collage {
+    position: relative;
     width: 100%;
-    padding: 0 20px;
-  }
- 
-  .collage-row {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    gap: 0;
+    min-height: 100vh;
   }
  
   .photo-item {
+    position: absolute;
     cursor: pointer;
-    flex-shrink: 0;
     overflow: hidden;
   }
  
@@ -219,7 +216,7 @@
   }
  
   .photo-item img.loaded { opacity: 1; }
-  .photo-item:hover img { opacity: 0.88; }
+  .photo-item:hover img { opacity: 0.85; }
  
   /* ── LIGHTBOX ── */
   .lightbox {
@@ -461,86 +458,65 @@
     { src: 'images/photo20.jpg', caption: '' },
   ];
  
-  // Collage layout patterns — widths in %, no vertical overlap
-  const patterns = [
-    [{ w: 42 }, { w: 32 }],
-    [{ w: 26 }, { w: 38 }, { w: 22 }],
-    [{ w: 48 }, { w: 34 }],
-    [{ w: 22 }, { w: 42 }, { w: 24 }],
-    [{ w: 36 }, { w: 28 }],
-    [{ w: 28 }, { w: 34 }, { w: 24 }],
-    [{ w: 44 }, { w: 30 }],
-    [{ w: 24 }, { w: 36 }, { w: 26 }],
-    [{ w: 40 }, { w: 36 }],
-    [{ w: 30 }, { w: 28 }, { w: 28 }],
+  // Scattered absolute collage layout
+  // Each entry: [leftPct, topPx, widthPct]
+  // Designed to look like the reference — real white space, vertical offsets, organic
+  const layout = [
+    // row 1
+    [2,   20,  24],
+    [30,  0,   36],
+    [72,  60,  25],
+    // row 2
+    [5,   340, 38],
+    [52,  280, 30],
+    // row 3
+    [18,  620, 22],
+    [44,  580, 38],
+    [84,  640, 14],
+    // row 4
+    [2,   880, 30],
+    [38,  840, 24],
+    [68,  900, 26],
+    // row 5
+    [10,  1120, 36],
+    [52,  1080, 28],
+    // row 6
+    [0,   1360, 22],
+    [28,  1300, 38],
+    [72,  1380, 24],
+    // row 7
+    [8,   1600, 28],
+    [42,  1560, 34],
+    [80,  1620, 16],
+    // row 8
+    [20,  1840, 40],
+    [66,  1800, 28],
   ];
  
-  function shuffle(arr) {
-    const a = [...arr];
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
+  const collageEl = document.getElementById('collage');
+  let maxBottom = 0;
  
-  const shuffled = shuffle([...photos]);
-  let currentIndex = 0;
-  let currentOrder = shuffled;
+  shuffled.forEach((p, i) => {
+    if (i >= layout.length) return;
+    const [leftPct, topPx, widthPct] = layout[i];
  
-  const collage = document.getElementById('collage');
-  let photoIdx = 0;
+    const div = document.createElement('div');
+    div.className = 'photo-item';
+    div.style.cssText = `left:${leftPct}%; top:${topPx}px; width:${widthPct}%;`;
  
-  // distribute photos into rows based on patterns (cycling)
-  const rows = [];
-  let pi = 0;
-  while (photoIdx < shuffled.length) {
-    const pattern = patterns[pi % patterns.length];
-    const rowPhotos = [];
-    for (let s = 0; s < pattern.length && photoIdx < shuffled.length; s++) {
-      rowPhotos.push({ photo: shuffled[photoIdx], slot: pattern[s], globalIdx: photoIdx });
-      photoIdx++;
-    }
-    if (rowPhotos.length) rows.push(rowPhotos);
-    pi++;
-  }
- 
-  rows.forEach(rowItems => {
-    const row = document.createElement('div');
-    row.className = 'collage-row';
- 
-    // fixed gap between photos in px, random left indent for scattered feel
-    const itemGap = 16;
-    const maxIndent = 80;
-    const indent = Math.floor(Math.random() * maxIndent);
- 
-    // leading indent spacer
-    const leadSp = document.createElement('div');
-    leadSp.style.cssText = `flex-shrink:0; width:${indent}px;`;
-    row.appendChild(leadSp);
- 
-    rowItems.forEach((item, i) => {
-      const div = document.createElement('div');
-      div.className = 'photo-item';
-      // use flex-grow based on weight so photos scale proportionally across remaining width
-      div.style.cssText = `flex: ${item.slot.w} 0 0; min-width:0;`;
- 
-      const img = document.createElement('img');
-      img.src = item.photo.src;
-      img.alt = item.photo.caption;
-      img.onload = () => img.classList.add('loaded');
-      div.appendChild(img);
-      div.addEventListener('click', () => openLightbox(item.globalIdx));
-      row.appendChild(div);
- 
-      if (i < rowItems.length - 1) {
-        const sp = document.createElement('div');
-        sp.style.cssText = `flex-shrink:0; width:${itemGap}px;`;
-        row.appendChild(sp);
+    const img = document.createElement('img');
+    img.src = p.src; img.alt = p.caption;
+    img.onload = () => {
+      img.classList.add('loaded');
+      const bottom = topPx + div.offsetHeight;
+      if (bottom > maxBottom) {
+        maxBottom = bottom;
+        collageEl.style.height = (maxBottom + 120) + 'px';
       }
-    });
- 
-    collage.appendChild(row);
+    };
+    div.appendChild(img);
+    div.addEventListener('click', () => openLightbox(i));
+    collageEl.appendChild(div);
   });
  
   // Lightbox grid thumbs
