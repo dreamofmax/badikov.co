@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
 <!-- Primary Meta -->
 <title>Maxim Badikov — Photographer & Picture Editor, London</title>
 <meta name="description" content="Maxim Badikov is a London-based photographer specialising in editorial, documentary and commercial photography. Also working as a picture editor and archive photography collector. Available for commissions worldwide.">
@@ -32,11 +32,11 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Maxim Badikov","url":"https://badikov.co","jobTitle":["Photographer","Picture Editor","Photography Collector"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"},"email":"studio@badikov.co","sameAs":["https://instagram.com/dreamofmax"],"areaServed":{"@type":"Place","name":"Worldwide"}}
 </script>
-
+ 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg: #ffffff;
     --fg: #0a0a0a;
@@ -44,7 +44,7 @@
     --border: #e8e8e8;
     --font: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
   }
-
+ 
   html, body {
     background: var(--bg);
     color: var(--fg);
@@ -53,7 +53,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-
+ 
   /* ── HEADER ── */
   header {
     position: fixed;
@@ -66,7 +66,7 @@
     z-index: 100;
     background: #fff;
   }
-
+ 
   .logo {
     font-size: 13px;
     font-weight: 400;
@@ -77,7 +77,7 @@
     color: var(--fg);
     cursor: pointer;
   }
-
+ 
   .about-btn {
     font-size: 13px;
     font-weight: 400;
@@ -91,7 +91,7 @@
     text-transform: uppercase;
     font-variant: small-caps;
   }
-
+ 
   /* ── ABOUT OVERLAY ── */
   .about-overlay {
     position: fixed;
@@ -104,12 +104,12 @@
     display: flex;
     flex-direction: column;
   }
-
+ 
   .about-overlay.open {
     opacity: 1;
     pointer-events: all;
   }
-
+ 
   .about-header {
     flex-shrink: 0;
     display: flex;
@@ -119,53 +119,53 @@
     padding: 0 24px;
     background: #fff;
   }
-
+ 
   .about-scroll {
     flex: 1;
     overflow-y: auto;
   }
-
+ 
   .about-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
     padding: 48px 24px 80px;
   }
-
+ 
   .about-left { padding-right: 60px; }
-
+ 
   .about-left .intro {
     font-size: 13px;
     line-height: 1.75;
     color: var(--fg);
     margin-bottom: 20px;
   }
-
+ 
   .about-left .meta-line {
     font-size: 13px;
     line-height: 1.9;
     color: var(--fg);
     margin-top: 24px;
   }
-
+ 
   .about-left .meta-line a {
     color: var(--fg);
     text-decoration: none;
   }
-
+ 
   .about-left .meta-line a:hover { opacity: 0.5; }
-
+ 
   .about-right { padding-top: 2px; }
-
+ 
   .about-section { margin-bottom: 28px; }
-
+ 
   .about-section-title {
     font-size: 12px;
     color: var(--mid);
     margin-bottom: 6px;
     font-style: italic;
   }
-
+ 
   .about-section p,
   .about-section a {
     display: block;
@@ -174,9 +174,9 @@
     color: var(--fg);
     text-decoration: none;
   }
-
+ 
   .about-section a:hover { opacity: 0.5; }
-
+ 
   .about-footer {
     flex-shrink: 0;
     text-align: center;
@@ -185,34 +185,32 @@
     font-style: italic;
     padding: 16px 24px;
   }
-
+ 
   /* ── COLLAGE LAYOUT ── */
   main {
     padding-top: 64px;
     padding-bottom: 80px;
   }
-
+ 
   .collage {
-    position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 32px;
   }
-
+ 
   .collage-row {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 0;
-    position: relative;
+    align-items: flex-end;
+    margin-bottom: 32px;
   }
-
+ 
   .photo-item {
     cursor: pointer;
     flex-shrink: 0;
     overflow: hidden;
   }
-
+ 
   .photo-item img {
     display: block;
     width: 100%;
@@ -220,10 +218,10 @@
     opacity: 0;
     transition: opacity 0.6s ease;
   }
-
+ 
   .photo-item img.loaded { opacity: 1; }
   .photo-item:hover img { opacity: 0.88; }
-
+ 
   /* ── LIGHTBOX ── */
   .lightbox {
     position: fixed;
@@ -234,9 +232,9 @@
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
-
+ 
   .lightbox.open { opacity: 1; pointer-events: all; }
-
+ 
   .lb-bg {
     position: absolute;
     inset: 0;
@@ -245,17 +243,17 @@
     opacity: 0;
     transition: opacity 0.4s ease;
   }
-
+ 
   .lb-bg.show { opacity: 1; }
-
+ 
   .lb-bg img {
     width: 100%; height: 100%;
     object-fit: cover;
-    filter: blur(60px) brightness(1.1) saturate(0.6);
+    filter: blur(28px) brightness(1.05) saturate(0.7);
     transform: scale(1.2);
     opacity: 0.55;
   }
-
+ 
   .lightbox-inner {
     position: relative;
     height: 100%;
@@ -264,7 +262,7 @@
     align-items: center;
     justify-content: center;
   }
-
+ 
   .lightbox-header {
     position: absolute;
     top: 0; left: 0; right: 0;
@@ -274,40 +272,40 @@
     justify-content: space-between;
     padding: 0 24px;
   }
-
+ 
   .lightbox-title { font-size: 14px; font-weight: 500; font-family: var(--font); }
-
+ 
   .lb-toggle {
     display: flex;
     gap: 16px;
     font-size: 14px;
     font-family: var(--font);
   }
-
+ 
   .lb-toggle span { cursor: pointer; color: var(--mid); transition: color 0.15s; }
   .lb-toggle span.active { color: var(--fg); }
-
+ 
   .lb-close {
     font-size: 14px;
     cursor: pointer;
     font-family: var(--font);
     color: var(--fg);
   }
-
+ 
   .lb-slides-view {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-
+ 
   .lb-slides-view.hidden { display: none; }
-
+ 
   .lightbox-img-wrap {
     max-width: 50vw;
     max-height: 72vh;
   }
-
+ 
   .lightbox-img-wrap img {
     max-width: 100%;
     max-height: 72vh;
@@ -316,7 +314,7 @@
     box-shadow: 0 2px 32px rgba(0,0,0,0.12);
     transition: opacity 0.22s ease;
   }
-
+ 
   .lb-prev, .lb-next {
     position: absolute;
     top: 50%; transform: translateY(-50%);
@@ -327,10 +325,10 @@
     color: var(--fg);
     font-family: var(--font);
   }
-
+ 
   .lb-prev { left: 0; }
   .lb-next { right: 0; }
-
+ 
   .lb-caption {
     margin-top: 16px;
     font-size: 13px;
@@ -338,7 +336,7 @@
     text-align: center;
     font-style: italic;
   }
-
+ 
   .lb-counter {
     margin-top: 8px;
     font-size: 12px;
@@ -346,7 +344,7 @@
     text-align: center;
     font-style: italic;
   }
-
+ 
   .lb-grid-view {
     display: none;
     grid-template-columns: repeat(6, 1fr);
@@ -356,29 +354,29 @@
     overflow-y: auto;
     max-height: 100vh;
   }
-
+ 
   .lb-grid-view.active { display: grid; }
-
+ 
   .lb-thumb { cursor: pointer; overflow: hidden; }
-
+ 
   .lb-thumb img {
     width: 100%; height: auto;
     display: block;
     opacity: 0.5;
     transition: opacity 0.18s;
   }
-
+ 
   .lb-thumb:hover img,
   .lb-thumb.active img { opacity: 1; }
 </style>
 </head>
 <body>
-
+ 
 <header>
   <span class="logo">Maxim Badikov</span>
   <button class="about-btn" id="aboutBtn">About</button>
 </header>
-
+ 
 <!-- About Overlay -->
 <div class="about-overlay" id="aboutOverlay">
   <div class="about-header">
@@ -410,11 +408,11 @@
   </div>
   <div class="about-footer">© Maxim Badikov 2026</div>
 </div>
-
+ 
 <main>
   <div class="collage" id="collage"></div>
 </main>
-
+ 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <div class="lb-bg" id="lbBg"><img id="lbBgImg" src="" alt=""></div>
@@ -439,7 +437,7 @@
     <div class="lb-grid-view" id="lbGridView"></div>
   </div>
 </div>
-
+ 
 <script>
   const photos = [
     { src: 'images/photo1.jpg',  caption: '' },
@@ -463,23 +461,21 @@
     { src: 'images/photo19.jpg', caption: '' },
     { src: 'images/photo20.jpg', caption: '' },
   ];
-
-  // Collage layout patterns — each row defines items as % widths and vertical offsets
-  // offset: positive = pushed down, negative = pulled up (overlap)
+ 
+  // Collage layout patterns — widths in %, no vertical overlap
   const patterns = [
-    // row: [{w, offset}]
-    [{ w: 38, mt: 0 }, { w: 28, mt: 60 }],
-    [{ w: 22, mt: 20 }, { w: 34, mt: 0 }, { w: 26, mt: 40 }],
-    [{ w: 44, mt: 0 }, { w: 30, mt: 30 }],
-    [{ w: 20, mt: 50 }, { w: 38, mt: 0 }, { w: 24, mt: 20 }],
-    [{ w: 32, mt: 0 }, { w: 26, mt: 40 }, { w: 22, mt: 10 }],
-    [{ w: 46, mt: 20 }, { w: 28, mt: 0 }],
-    [{ w: 24, mt: 0 }, { w: 30, mt: 50 }, { w: 28, mt: 10 }],
-    [{ w: 36, mt: 30 }, { w: 32, mt: 0 }],
-    [{ w: 20, mt: 10 }, { w: 40, mt: 0 }, { w: 22, mt: 35 }],
-    [{ w: 42, mt: 0 }, { w: 26, mt: 25 }],
+    [{ w: 42 }, { w: 32 }],
+    [{ w: 26 }, { w: 38 }, { w: 22 }],
+    [{ w: 48 }, { w: 34 }],
+    [{ w: 22 }, { w: 42 }, { w: 24 }],
+    [{ w: 36 }, { w: 28 }],
+    [{ w: 28 }, { w: 34 }, { w: 24 }],
+    [{ w: 44 }, { w: 30 }],
+    [{ w: 24 }, { w: 36 }, { w: 26 }],
+    [{ w: 40 }, { w: 36 }],
+    [{ w: 30 }, { w: 28 }, { w: 28 }],
   ];
-
+ 
   function shuffle(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -488,14 +484,14 @@
     }
     return a;
   }
-
+ 
   const shuffled = shuffle([...photos]);
   let currentIndex = 0;
   let currentOrder = shuffled;
-
+ 
   const collage = document.getElementById('collage');
   let photoIdx = 0;
-
+ 
   // distribute photos into rows based on patterns (cycling)
   const rows = [];
   let pi = 0;
@@ -509,28 +505,28 @@
     if (rowPhotos.length) rows.push(rowPhotos);
     pi++;
   }
-
+ 
   rows.forEach(rowItems => {
     const row = document.createElement('div');
     row.className = 'collage-row';
-    row.style.cssText = `align-items: flex-start; gap: 12px; margin-bottom: -20px;`;
-
-    // Fill gaps with spacers so images don't always hug left
+ 
     const totalW = rowItems.reduce((s, it) => s + it.slot.w, 0);
-    const gap = (100 - totalW) / (rowItems.length + 1);
-
+    const leftover = 100 - totalW;
+    // distribute leftover as: leading indent + gaps between items
+    const divisions = rowItems.length + 1;
+    const gap = leftover / divisions;
+ 
     rowItems.forEach((item, i) => {
-      // leading spacer
       if (i === 0) {
         const sp = document.createElement('div');
         sp.style.cssText = `flex-shrink:0; width:${gap}%;`;
         row.appendChild(sp);
       }
-
+ 
       const div = document.createElement('div');
       div.className = 'photo-item';
-      div.style.cssText = `width:${item.slot.w}%; margin-top:${item.slot.mt}px;`;
-
+      div.style.cssText = `width:${item.slot.w}%;`;
+ 
       const img = document.createElement('img');
       img.src = item.photo.src;
       img.alt = item.photo.caption;
@@ -538,18 +534,17 @@
       div.appendChild(img);
       div.addEventListener('click', () => openLightbox(item.globalIdx));
       row.appendChild(div);
-
-      // spacer between items
+ 
       if (i < rowItems.length - 1) {
         const sp = document.createElement('div');
         sp.style.cssText = `flex-shrink:0; width:${gap}%;`;
         row.appendChild(sp);
       }
     });
-
+ 
     collage.appendChild(row);
   });
-
+ 
   // Lightbox grid thumbs
   const lbGridView = document.getElementById('lbGridView');
   shuffled.forEach((p, i) => {
@@ -561,20 +556,20 @@
     div.addEventListener('click', () => { setLbView('slides'); showImage(i); });
     lbGridView.appendChild(div);
   });
-
+ 
   function openLightbox(i) {
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
     document.getElementById('lbBg').classList.add('show');
     showImage(i); setLbView('slides');
   }
-
+ 
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
     document.getElementById('lbBg').classList.remove('show');
   }
-
+ 
   function showImage(i) {
     currentIndex = i;
     const lbImg = document.getElementById('lbImg');
@@ -588,25 +583,25 @@
     }, 160);
     document.querySelectorAll('.lb-thumb').forEach((t, idx) => t.classList.toggle('active', idx === i));
   }
-
+ 
   function setLbView(v) {
     document.getElementById('slidesToggle').classList.toggle('active', v === 'slides');
     document.getElementById('gridToggle').classList.toggle('active', v === 'grid');
     document.getElementById('lbSlidesView').classList.toggle('hidden', v !== 'slides');
     document.getElementById('lbGridView').classList.toggle('active', v === 'grid');
   }
-
+ 
   document.getElementById('lbPrev').addEventListener('click', () => showImage((currentIndex - 1 + currentOrder.length) % currentOrder.length));
   document.getElementById('lbNext').addEventListener('click', () => showImage((currentIndex + 1) % currentOrder.length));
   document.getElementById('lbClose').addEventListener('click', closeLightbox);
-
+ 
   document.addEventListener('keydown', e => {
     if (!document.getElementById('lightbox').classList.contains('open')) return;
     if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentOrder.length);
     if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentOrder.length) % currentOrder.length);
     if (e.key === 'Escape') closeLightbox();
   });
-
+ 
   document.getElementById('aboutBtn').addEventListener('click', () => {
     document.getElementById('aboutOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -618,3 +613,4 @@
 </script>
 </body>
 </html>
+ 
