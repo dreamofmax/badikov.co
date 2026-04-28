@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary Meta -->
+<title>Maxim Badikov — Photographer & Picture Editor, London</title>
+<meta name="description" content="Maxim Badikov is a London-based photographer specialising in editorial, documentary and commercial photography. Also working as a picture editor and archive photography collector. Available for commissions worldwide.">
+<meta name="keywords" content="Maxim Badikov, London photographer, editorial photographer, documentary photographer, commercial photographer, picture editor, photography collector, archive photography, London, UK photographer, travel photographer">
+<meta name="author" content="Maxim Badikov">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<link rel="canonical" href="https://badikov.co/">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badikov.co/">
+<meta property="og:title" content="Maxim Badikov — Photographer & Picture Editor, London">
+<meta property="og:description" content="London-based photographer specialising in editorial, documentary and commercial work. Picture editor and archive photography collector. Available for commissions worldwide.">
+<meta property="og:image" content="https://badikov.co/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Maxim Badikov">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dreamofmax">
+<meta name="twitter:creator" content="@dreamofmax">
+<meta name="twitter:title" content="Maxim Badikov — Photographer & Picture Editor, London">
+<meta name="twitter:description" content="London-based photographer specialising in editorial, documentary and commercial work. Available for commissions worldwide.">
+<meta name="twitter:image" content="https://badikov.co/og-image.jpg">
+
+<!-- Geo -->
+<meta name="geo.region" content="GB-LND">
+<meta name="geo.placename" content="London">
+
+<!-- Structured Data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Maxim Badikov",
+  "url": "https://badikov.co",
+  "image": "https://badikov.co/og-image.jpg",
+  "jobTitle": ["Photographer", "Picture Editor", "Photography Collector"],
+  "description": "London-based photographer specialising in editorial, documentary and commercial photography. Also working as a picture editor and archive photography collector.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "email": "studio@badikov.co",
+  "sameAs": [
+    "https://instagram.com/dreamofmax"
+  ],
+  "knowsAbout": [
+    "Editorial Photography",
+    "Documentary Photography",
+    "Commercial Photography",
+    "Picture Editing",
+    "Archive Photography",
+    "Photography Collection"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  }
+}
+</script>
+
+<!-- Structured Data: Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Maxim Badikov",
+  "url": "https://badikov.co",
+  "description": "Portfolio of Maxim Badikov — London-based photographer, picture editor and photography collector.",
+  "author": {
+    "@type": "Person",
+    "name": "Maxim Badikov"
+  }
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --fg: #0a0a0a;
+    --mid: #999;
+    --border: #e8e8e8;
+    --font: 'EB Garamond', Georgia, serif;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    background: #fff;
+  }
+
+  .logo {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font);
+    letter-spacing: 0.01em;
+    color: var(--fg);
+    cursor: pointer;
+  }
+
+  .about-btn {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font);
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--fg);
+    padding: 0;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── ABOUT OVERLAY ── */
+  .about-overlay {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .about-header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    background: #fff;
+  }
+
+  .about-scroll {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .about-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 48px 24px 80px;
+  }
+
+  .about-left {
+    padding-right: 60px;
+  }
+
+  .about-left .intro {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--fg);
+    margin-bottom: 20px;
+  }
+
+  .about-left .meta-line {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--fg);
+    margin-top: 24px;
+  }
+
+  .about-left .meta-line a {
+    color: var(--fg);
+    text-decoration: none;
+  }
+
+  .about-left .meta-line a:hover { opacity: 0.5; }
+
+  .about-right { padding-top: 2px; }
+
+  .about-section { margin-bottom: 28px; }
+
+  .about-section-title {
+    font-size: 12px;
+    color: var(--mid);
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+
+  .about-section p,
+  .about-section a {
+    display: block;
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--fg);
+    text-decoration: none;
+  }
+
+  .about-section a:hover { opacity: 0.5; }
+
+  .about-footer {
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--mid);
+    font-style: italic;
+    padding: 16px 24px;
+  }
+
+  /* ── MAIN GRID ── */
+  main { padding-top: 48px; min-height: 100vh; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px 16px;
+  }
+
+  .grid-item {
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .grid-item img.loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.025);
+    transition-duration: 0.35s;
+  }
+
+  .grid-item { animation: fadeUp 0.6s ease both; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .lightbox.open { opacity: 1; pointer-events: all; }
+
+  .lb-bg-grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .lb-bg-grid.show { opacity: 1; }
+  .lb-bg-grid-item { overflow: hidden; }
+
+  .lb-bg-grid-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    opacity: 0.1;
+    transform: scale(1.06);
+  }
+
+  .lightbox-inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .lightbox-title { font-size: 14px; font-weight: 500; font-family: var(--font); }
+
+  .lb-toggle {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    font-family: var(--font);
+  }
+
+  .lb-toggle span { cursor: pointer; color: var(--mid); transition: color 0.15s; }
+  .lb-toggle span.active { color: var(--fg); }
+
+  .lb-close {
+    font-size: 14px;
+    cursor: pointer;
+    font-family: var(--font);
+    color: var(--fg);
+  }
+
+  .lb-slides-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .lb-slides-view.hidden { display: none; }
+
+  .lightbox-img-wrap {
+    max-width: 50vw;
+    max-height: 72vh;
+  }
+
+  .lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 2px 32px rgba(0,0,0,0.12);
+    transition: opacity 0.22s ease;
+  }
+
+  .lb-prev, .lb-next {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    padding: 20px 24px;
+    color: var(--fg);
+    font-family: var(--font);
+  }
+
+  .lb-prev { left: 0; }
+  .lb-next { right: 0; }
+
+  .lb-caption {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--mid);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .lb-counter {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--mid);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .lb-grid-view {
+    display: none;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    padding: 66px 28px 28px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .lb-grid-view.active { display: grid; }
+
+  .lb-thumb { cursor: pointer; overflow: hidden; }
+
+  .lb-thumb img {
+    width: 100%; height: auto;
+    display: block;
+    opacity: 0.5;
+    transition: opacity 0.18s;
+  }
+
+  .lb-thumb:hover img,
+  .lb-thumb.active img { opacity: 1; }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo">Maxim Badikov</span>
+  <button class="about-btn" id="aboutBtn">About</button>
+</header>
+
+<!-- About Overlay -->
+<div class="about-overlay" id="aboutOverlay">
+  <div class="about-header">
+    <span class="logo">Maxim Badikov</span>
+    <button class="about-btn" id="closeAboutBtn">Close</button>
+  </div>
+  <div class="about-scroll">
+    <div class="about-body">
+      <div class="about-left">
+        <p class="intro">Maxim Badikov is a London-based photographer, picture editor and photography collector. He works on long-form projects that explore the social landscape. With a background in journalism and experience as a picture editor for leading media, he brings a strong storytelling approach to creating compelling, authentic visuals.</p>
+        <p class="intro">Badikov is available for commercial and editorial commissions.</p>
+        <p class="intro">For project inquiries or to purchase his work, please reach out via email.</p>
+        <div class="meta-line">
+          <p>Email — <a href="mailto:studio@badikov.co">studio@badikov.co</a></p>
+          <p>IG — <a href="https://instagram.com/dreamofmax" target="_blank">@dreamofmax</a></p>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-section">
+          <div class="about-section-title">Selected Clients</div>
+          <p>IMM Models</p>
+          <p>Anti-Agency</p>
+          <p>Storm Management</p>
+          <p>Kommersant</p>
+          <p>BYD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-footer">© Maxim Badikov 2026</div>
+</div>
+
+<main>
+  <div class="grid" id="photoGrid"></div>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-bg-grid" id="lbBgGrid"></div>
+  <div class="lightbox-inner">
+    <div class="lightbox-header">
+      <span class="lightbox-title">Maxim Badikov</span>
+      <div class="lb-toggle">
+        <span class="active" id="slidesToggle" onclick="setLbView('slides')">Slides</span>
+        <span id="gridToggle" onclick="setLbView('grid')">Grid</span>
+      </div>
+      <span class="lb-close" id="lbClose">Close</span>
+    </div>
+    <div class="lb-slides-view" id="lbSlidesView">
+      <span class="lb-prev" id="lbPrev">Prev</span>
+      <div class="lightbox-img-wrap">
+        <img id="lbImg" src="" alt="">
+      </div>
+      <span class="lb-next" id="lbNext">Next</span>
+      <div class="lb-caption" id="lbCaption"></div>
+      <div class="lb-counter" id="lbCounter"></div>
+    </div>
+    <div class="lb-grid-view" id="lbGridView"></div>
+  </div>
+</div>
+
+<script>
+  const photos = [
+    { src: 'https://picsum.photos/seed/mb1/400/320',  caption: 'Beach, 2022' },
+    { src: 'https://picsum.photos/seed/mb2/320/380',  caption: 'Palm Trees, 2021' },
+    { src: 'https://picsum.photos/seed/mb3/460/300',  caption: 'Crowd, 2022' },
+    { src: 'https://picsum.photos/seed/mb4/340/360',  caption: 'Mountain, 2020' },
+    { src: 'https://picsum.photos/seed/mb5/320/330',  caption: 'Silhouette, 2023' },
+    { src: 'https://picsum.photos/seed/mb6/360/310',  caption: 'Swimmer, 2021' },
+    { src: 'https://picsum.photos/seed/mb7/320/360',  caption: 'Figure, 2022' },
+    { src: 'https://picsum.photos/seed/mb8/350/340',  caption: 'Shell, 2020' },
+    { src: 'https://picsum.photos/seed/mb9/400/310',  caption: 'Standing, 2022' },
+    { src: 'https://picsum.photos/seed/mb10/340/340', caption: 'Ice, 2021' },
+    { src: 'https://picsum.photos/seed/mb11/330/350', caption: 'Lighthouse, 2022' },
+    { src: 'https://picsum.photos/seed/mb12/350/320', caption: 'Dusk, 2023' },
+    { src: 'https://picsum.photos/seed/mb13/340/370', caption: 'Plants, 2021' },
+    { src: 'https://picsum.photos/seed/mb14/320/380', caption: 'Bloom, 2022' },
+    { src: 'https://picsum.photos/seed/mb15/400/310', caption: 'Gate, 2022' },
+    { src: 'https://picsum.photos/seed/mb16/340/360', caption: 'Winter, 2021' },
+    { src: 'https://picsum.photos/seed/mb17/360/330', caption: 'Embrace, 2023' },
+    { src: 'https://picsum.photos/seed/mb18/380/300', caption: 'Ripple, 2022' },
+  ];
+
+  let currentIndex = 0;
+
+  const grid = document.getElementById('photoGrid');
+  photos.forEach((p, i) => {
+    const item = document.createElement('div');
+    item.className = 'grid-item';
+    item.style.animationDelay = `${i * 0.035}s`;
+    const img = document.createElement('img');
+    img.src = p.src; img.alt = p.caption;
+    img.onload = () => img.classList.add('loaded');
+    item.appendChild(img);
+    item.addEventListener('click', () => openLightbox(i));
+    grid.appendChild(item);
+  });
+
+  const lbBgGrid = document.getElementById('lbBgGrid');
+  photos.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'lb-bg-grid-item';
+    const img = document.createElement('img'); img.src = p.src;
+    div.appendChild(img); lbBgGrid.appendChild(div);
+  });
+
+  const lbGridView = document.getElementById('lbGridView');
+  photos.forEach((p, i) => {
+    const div = document.createElement('div');
+    div.className = 'lb-thumb';
+    const img = document.createElement('img'); img.src = p.src; img.alt = p.caption;
+    div.appendChild(img);
+    div.addEventListener('click', () => { setLbView('slides'); showImage(i); });
+    lbGridView.appendChild(div);
+  });
+
+  function openLightbox(i) {
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbBgGrid').classList.add('show');
+    showImage(i); setLbView('slides');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('lbBgGrid').classList.remove('show');
+  }
+
+  function showImage(i) {
+    currentIndex = i;
+    const lbImg = document.getElementById('lbImg');
+    lbImg.style.opacity = 0;
+    setTimeout(() => {
+      lbImg.src = photos[i].src;
+      lbImg.onload = () => { lbImg.style.opacity = 1; };
+      document.getElementById('lbCaption').textContent = photos[i].caption;
+      document.getElementById('lbCounter').textContent = `${i + 1} of ${photos.length}`;
+    }, 160);
+    document.querySelectorAll('.lb-thumb').forEach((t, idx) => t.classList.toggle('active', idx === i));
+  }
+
+  function setLbView(v) {
+    document.getElementById('slidesToggle').classList.toggle('active', v === 'slides');
+    document.getElementById('gridToggle').classList.toggle('active', v === 'grid');
+    document.getElementById('lbSlidesView').classList.toggle('hidden', v !== 'slides');
+    document.getElementById('lbGridView').classList.toggle('active', v === 'grid');
+  }
+
+  document.getElementById('lbPrev').addEventListener('click', () => showImage((currentIndex - 1 + photos.length) % photos.length));
+  document.getElementById('lbNext').addEventListener('click', () => showImage((currentIndex + 1) % photos.length));
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowRight') showImage((currentIndex + 1) % photos.length);
+    if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + photos.length) % photos.length);
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  document.getElementById('aboutBtn').addEventListener('click', () => {
+    document.getElementById('aboutOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('closeAboutBtn').addEventListener('click', () => {
+    document.getElementById('aboutOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+</script>
+</body>
+</html>
