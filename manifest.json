@@ -3,11 +3,19 @@
     "no-desk-no-gain": {
       "title": "No Desk, No Gain (in progress)",
       "password": true,
-      "password_value": "password123",
+      "password_value": "5701",
       "images": [
         { "src": "images/projects/no-desk-no-gain/001.jpg", "cap": "" },
         { "src": "images/projects/no-desk-no-gain/002.jpg", "cap": "" },
         { "src": "images/projects/no-desk-no-gain/003.jpg", "cap": "" }
+      ]
+    "projects": {
+    "uncatalogued": {
+      "title": "Uncatalogued (ongoing)",
+      "images": [
+        { "src": "images/projects/uncatalogued/001.jpg", "cap": "" },
+        { "src": "images/projects/uncatalogued/002.jpg", "cap": "" },
+        { "src": "images/projects/uncatalogued/003.jpg", "cap": "" }
       ]
     }
   },
@@ -25,11 +33,6 @@
     { "src": "images/personal/001.jpg", "cap": "" },
     { "src": "images/personal/002.jpg", "cap": "" },
     { "src": "images/personal/003.jpg", "cap": "" }
-  ],
-  "archive": [
-    { "src": "images/archive/001.jpg", "cap": "" },
-    { "src": "images/archive/002.jpg", "cap": "" },
-    { "src": "images/archive/003.jpg", "cap": "" }
   ],
   "cover": "images/cover.jpg"
 }
