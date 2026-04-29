@@ -9,8 +9,7 @@
         { "src": "images/projects/no-desk-no-gain/002.jpg", "cap": "" },
         { "src": "images/projects/no-desk-no-gain/003.jpg", "cap": "" }
       ]
-    }
-  "new-project": {
+      "new-project": {
   "title": "New Project Title",
   "images": [
     { "src": "images/projects/new-project/001.jpg", "cap": "Caption" }
