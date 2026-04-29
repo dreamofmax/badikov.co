@@ -9,13 +9,13 @@
         { "src": "images/projects/no-desk-no-gain/002.jpg", "cap": "" },
         { "src": "images/projects/no-desk-no-gain/003.jpg", "cap": "" }
       ]
-      "new-project": {
-  "title": "New Project Title",
-  "images": [
+  },
+    "new-project": {
+    "title": "New Project Title",
+    "images": [
     { "src": "images/projects/new-project/001.jpg", "cap": "Caption" }
   ]
-}
-  },
+},
   "commissioned": [
     { "src": "images/commissioned/001.jpg", "cap": "" },
     { "src": "images/commissioned/002.jpg", "cap": "" },
