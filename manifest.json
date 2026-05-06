@@ -1,0 +1,267 @@
+{
+  "projects": {
+    "no-desk-no-gain": {
+      "title": "No Desk, No Gain (in progress)",
+      "password": true,
+      "password_value": "password123",
+      "images": [
+        {
+          "src": "images/projects/no-desk-no-gain/001.jpeg",
+          "cap": ""
+        }
+      ]
+    },
+    "private-histories": {
+      "title": "Private Histories (ongoing)",
+      "password": false,
+      "about": {
+        "title": "Private Histories (ongoing)",
+        "paragraphs": [
+          "In the early 2020s, Maxim Badikov began collecting photography from around the world. He focuses on unknown pieces found at flea markets or online.",
+          "The collection is open for exhibitions, editorial projects and media inquiries."
+        ]
+      },
+      "images": [
+        {
+          "src": "images/projects/private-histories/001.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/002.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/003.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/004.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/005.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/006.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/007.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/008.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/009.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/010.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/011.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/012.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/013.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/014.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/015.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/016.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/017.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/018.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/019.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/020.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/021.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/022.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/023.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/024.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/025.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/026.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/027.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/028.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/029.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/030.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/031.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/private-histories/032.jpeg",
+          "cap": ""
+        }
+      ]
+    }
+  },
+  "commissioned": [
+    {
+      "src": "images/commissioned/001.jpeg",
+      "cap": ""
+    }
+  ],
+  "portraits": [
+    {
+      "src": "images/portraits/001.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/002.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/003.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/004.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/005.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/006.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/007.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/008.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/009.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/010.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/011.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/portraits/012.jpeg",
+      "cap": ""
+    }
+  ],
+  "personal": [
+    {
+      "src": "images/personal/001.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/002.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/003.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/004.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/005.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/006.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/007.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/008.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/009.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/010.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/011.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/012.jpeg",
+      "cap": ""
+    },
+    {
+      "src": "images/personal/013.jpeg",
+      "cap": ""
+    }
+  ],
+  "cover": "images/cover.jpg"
+}
