@@ -5,13 +5,15 @@ A single-page photography portfolio (`index.html` + `manifest.json`) with a smal
 ## Project structure
 
 ```
-index.html          the public site (all pages, hash-routed: #/, #/about, #/gallery/<key>, #/index/<key>)
+index.html          the public site (all pages, real URLs: /, /about, /gallery/<key>, /index/<key>)
 manifest.json        all content: projects, galleries, image paths, captions
 images/               photo files, organized by section (created as you upload)
-robots.txt / sitemap.xml   SEO files (sitemap has a placeholder domain — see "Going live" below)
+robots.txt / sitemap.xml   SEO files, already set to the badikov.co domain
 server.js             the server you run — serves the public site AND the admin panel
 admin/                admin panel: index.html (UI), api.js (routes), auth.js (login)
 ```
+
+Pages use real URLs (`/gallery/portraits`, `/about`, etc.), not `#` hash links — clean and copy-paste-able. This requires the server: for any URL that isn't a real file, `server.js` serves `index.html` and the page's own router takes it from there (standard single-page-app routing). This only works when running via `node server.js` / `npm start` — opening `index.html` directly by double-click only reliably shows the home page, since there's no server to resolve deep links (browsers also restrict URL changes on `file://` for security, so the address bar won't update there either).
 
 ## Running it locally
 
@@ -28,7 +30,7 @@ Then open:
 
 The port can be changed with `PORT=3000 npm start`.
 
-> You can also just open `index.html` directly in a browser (double-click it) to preview the public site with no server running — the admin panel needs the server, though.
+> Opening `index.html` directly (double-click, no server) works for a quick look at the home page, but deep links (`/gallery/...`) and the admin panel both need the server running — see the routing note above.
 
 ## Using the admin panel
 
@@ -79,7 +81,7 @@ This needs a host that can run a persistent Node process with writable disk (the
 2. Set `PORT` if your host requires a specific one (most set it automatically).
 3. Set `ADMIN_USER` and `ADMIN_PASS` as environment variables in your host's dashboard (recommended over the auto-generated local file for a real deployment).
 4. Make sure your domain serves **HTTPS** (virtually every modern host does this automatically) — Basic Auth sends credentials in a way that's only safe over an encrypted connection.
-5. Once you have a live domain, update the placeholder in `sitemap.xml` (`https://REPLACE-WITH-LIVE-DOMAIN.example/`) and consider adding `<link rel="canonical">` / `og:url` tags in `index.html` (marked with a `TODO` comment in the `<head>`).
+5. `sitemap.xml`, `robots.txt`, and the canonical/Open Graph tags in `index.html` are already set to `badikov.co` — if you end up using a different domain, update those references.
 
 ## Notes
 

@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Only the homepage is listed: the site's galleries and About page are
-  reached via hash routes (e.g. #/about, #/gallery/portraits), and Google
-  does not index hash-fragment URLs as separate pages. Once the site is
-  deployed to a real domain and/or moves to real per-page URLs, replace
-  the placeholder loc below with the live homepage URL and expand this
-  file with additional <url> entries as needed.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://REPLACE-WITH-LIVE-DOMAIN.example/</loc>
+    <loc>https://badikov.co/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/commissioned</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/portraits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/personal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/private-histories</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/no-desk-no-gain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

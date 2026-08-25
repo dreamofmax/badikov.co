@@ -35,12 +35,27 @@ function safeJoin(base, ...parts) {
   return resolved;
 }
 
-function serveStatic(res, absPath) {
+// The client uses real paths for routing (/gallery/portraits, /about, ...) with
+// no server-side page per route. If a GET request doesn't match a real file and
+// doesn't look like a file request (no extension), serve index.html so the
+// client-side router can take over — the standard SPA fallback pattern.
+function serveStaticOrSpaFallback(req, res, absPath, pathname) {
   fs.readFile(absPath, (err, data) => {
-    if (err) { res.writeHead(404, { 'Content-Type': 'text/plain' }); res.end('Not found'); return; }
-    const ext = path.extname(absPath).toLowerCase();
-    res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
-    res.end(data);
+    if (!err) {
+      const ext = path.extname(absPath).toLowerCase();
+      res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
+      res.end(data);
+      return;
+    }
+    const looksLikeFile = /\.[a-zA-Z0-9]+$/.test(pathname);
+    if (req.method === 'GET' && !looksLikeFile) {
+      return fs.readFile(path.join(ROOT, 'index.html'), (err2, html) => {
+        if (err2) { res.writeHead(404, { 'Content-Type': 'text/plain' }); res.end('Not found'); return; }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(html);
+      });
+    }
+    res.writeHead(404, { 'Content-Type': 'text/plain' }); res.end('Not found');
   });
 }
 
@@ -84,7 +99,7 @@ const server = http.createServer(async (req, res) => {
     if (pathname.includes('..')) { res.writeHead(400); res.end('Bad request'); return; }
     const rel = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
     const absPath = safeJoin(ROOT, rel);
-    return serveStatic(res, absPath);
+    return serveStaticOrSpaFallback(req, res, absPath, pathname);
   } catch (e) {
     res.writeHead(500, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: e.message || 'Server error' }));

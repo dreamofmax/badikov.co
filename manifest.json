@@ -14,12 +14,7 @@
           }
         ]
       },
-      "images": [
-        {
-          "src": "images/projects/no-desk-no-gain/001.jpeg",
-          "cap": ""
-        }
-      ]
+      "images": []
     },
     "private-histories": {
       "title": "Private Histories (ongoing)",
