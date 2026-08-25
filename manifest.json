@@ -2,8 +2,18 @@
   "projects": {
     "no-desk-no-gain": {
       "title": "No Desk, No Gain (in progress)",
-      "password": true,
-      "password_value": "password123",
+      "password": false,
+      "about": {
+        "title": "No Desk, No Gain (in progress)",
+        "paragraphs": [
+          "No Desk, No Gain is an ongoing documentary project, currently in production.",
+          "This project is self-funded — your support helps keep it going, and every contribution makes a real difference.",
+          {
+            "text": "Support this project",
+            "href": "https://gofund.me/c196c699d"
+          }
+        ]
+      },
       "images": [
         {
           "src": "images/projects/no-desk-no-gain/001.jpeg",

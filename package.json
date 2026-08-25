@@ -1,0 +1,14 @@
+{
+  "name": "max-badikov-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Max Badikov photography site — public pages plus a Basic-Auth-protected admin panel at /admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init-creds": "node server.js --init-creds"
+  },
+  "dependencies": {
+    "sharp": "^0.35.3"
+  }
+}

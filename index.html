@@ -3,7 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max Badikov</title>
+<title>Max Badikov — Documentary Photographer, London & Worldwide</title>
+<meta name="description" content="Max Badikov is a documentary and editorial photographer based in London, available for assignments across the UK and worldwide. Picture editor with news media experience, photography collector, working across film and black-and-white photography.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Max Badikov">
+<meta property="og:title" content="Max Badikov — Documentary Photographer, London & Worldwide">
+<meta property="og:description" content="Documentary and editorial photographer based in London, available worldwide. Picture editor with news media experience, photography collector, film and black-and-white photography.">
+<meta property="og:image" content="images/cover.jpg">
+<meta property="og:locale" content="en_GB">
+<!-- TODO: once the site has a live domain, add og:url and <link rel="canonical" href="..."> -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Max Badikov — Documentary Photographer, London & Worldwide">
+<meta name="twitter:description" content="Documentary and editorial photographer based in London, available worldwide. Picture editor, photography collector, film and black-and-white photography.">
+<meta name="twitter:image" content="images/cover.jpg">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='34' fill='%23fff' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Max Badikov",
+  "jobTitle": ["Documentary Photographer", "Editorial Photographer", "Picture Editor"],
+  "description": "Max Badikov is a London-based documentary and editorial photographer available worldwide, a photography collector, and a picture editor with news media experience. He works across film and digital, black-and-white and colour photography.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "areaServed": "Worldwide",
+  "sameAs": ["https://www.instagram.com/dreamofmax"],
+  "knowsAbout": ["Documentary Photography", "Editorial Photography", "Photojournalism", "Picture Editing", "Photography Collecting", "Film Photography", "Black and White Photography", "Portrait Photography"]
+}
+</script>
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -27,34 +65,44 @@ html, body {
   height: 100vh; overflow-y: auto;
   flex-shrink: 0; background: #fff; z-index: 20;
 }
-.nav-title { font-size: 13px; font-weight: 400; margin-bottom: 26px; line-height: 1.3; letter-spacing: 0.01em; }
+.nav-title {
+  font-size: 15px; font-weight: 600; margin-bottom: 30px; line-height: 1.3;
+  letter-spacing: 0.02em; padding-bottom: 14px; border-bottom: 1px solid #eee;
+}
 .nav-title a { color: #000; text-decoration: none; }
 
+/* top-level sections: Projects / Commissioned / Portraits / Personal / About */
 .nav-link {
-  font-size: 11.5px; letter-spacing: 0.03em; text-transform: none;
-  color: #000; text-decoration: none; display: block; line-height: 2.1;
-  cursor: pointer; background: none; border: none;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #000; text-decoration: none; display: block; line-height: 2.3;
+  cursor: pointer; background: none; border: none; font-weight: 600;
   font-family: var(--sans); padding: 0; text-align: left; width: 100%;
 }
 .nav-link:hover { color: #999; }
 .nav-link.dim { color: #999; }
 
-.nav-sub { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.nav-sub { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; margin-left: 2px; border-left: 1px solid #eee; }
 .nav-sub.open { max-height: 700px; }
 
+/* project titles nested under Projects — visually distinct from top-level sections */
 .nav-sub-link {
-  font-size: 11px; letter-spacing: 0.02em; color: #000;
-  text-decoration: none; display: block; line-height: 2; cursor: pointer;
+  font-size: 10.5px; letter-spacing: 0.01em; text-transform: none; font-weight: 400;
+  color: #555; text-decoration: none; display: block; line-height: 2.1;
+  cursor: pointer; padding-left: 14px;
 }
 .nav-sub-link:hover { color: #999; }
-.nav-sub-link.dim { color: #999; }
+.nav-sub-link.dim { color: #bbb; }
 
 /* ── INSTAGRAM ── */
 .ig-icon {
-  position: fixed; top: 20px; right: 22px; z-index: 100;
-  color: #000; opacity: 0.65; transition: opacity 0.2s; text-decoration: none;
+  position: fixed; top: 18px; right: 20px; z-index: 100;
+  width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(6px) saturate(1.3); -webkit-backdrop-filter: blur(6px) saturate(1.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  color: #000; opacity: 0.85; transition: opacity 0.2s, transform 0.2s; text-decoration: none;
 }
-.ig-icon:hover { opacity: 1; }
+.ig-icon:hover { opacity: 1; transform: scale(1.06); }
 .ig-icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ── MAIN ── */
@@ -80,9 +128,9 @@ html, body {
 .gal-view {
   flex: 1; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
-  padding: 28px 36px 0 36px; position: relative;
+  padding: 58px 36px 0 36px; position: relative;
 }
-.gal-view img { max-height: 100%; max-width: 100%; object-fit: contain; display: block; pointer-events: none; user-select: none; }
+.gal-view img { max-height: 100%; max-width: 100%; object-fit: contain; display: block; pointer-events: none; user-select: none; transition: opacity 0.22s ease; }
 .gal-ph { width: 60%; height: 75%; background: #d0d0d0; }
 
 .gal-prev-zone { position: absolute; left:0; top:0; width:50%; height:100%; cursor:w-resize; z-index:5; }
@@ -119,6 +167,7 @@ html, body {
 }
 .gal-about-text p { margin-bottom: 14px; }
 .gal-about-text p:last-child { margin-bottom: 0; }
+.gal-about-text a { color: #000; }
 
 /* ── CAPTION BAR ── */
 .gal-bar {
@@ -147,7 +196,7 @@ html, body {
 .about-toggle-btn:hover { color: #999; }
 
 /* ── INDEX GRID ── */
-.index-page { flex: 1; overflow-y: auto; padding: 28px 36px 28px 36px; }
+.index-page { flex: 1; overflow-y: auto; padding: 58px 36px 28px 36px; }
 .index-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
 .index-cell { cursor: pointer; overflow: hidden; aspect-ratio: 3/4; background: #ccc; }
 .index-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.15s; }
@@ -219,16 +268,16 @@ html, body {
 
 <div class="shell">
   <nav class="nav" id="siteNav">
-    <div class="nav-title"><a href="#" onclick="goHome();return false;">Max Badikov</a></div>
+    <div class="nav-title"><a href="#/" onclick="goHome();return false;">Max Badikov</a></div>
     <button class="nav-link" id="nlbl-projects" onclick="toggleProjects()">Projects</button>
     <div class="nav-sub" id="projects-sub"></div>
-    <a class="nav-link" href="#" id="nlbl-commissioned" onclick="openGal('commissioned');return false;">Commissioned</a>
-    <a class="nav-link" href="#" id="nlbl-portraits"    onclick="openGal('portraits');return false;">Portraits</a>
-    <a class="nav-link" href="#" id="nlbl-personal"     onclick="openGal('personal');return false;">Personal</a>
-    <a class="nav-link" href="#" id="nlbl-about"        onclick="activatePage('about');return false;">About</a>
+    <a class="nav-link" href="#/gallery/commissioned" id="nlbl-commissioned" onclick="openGal('commissioned');return false;">Commissioned</a>
+    <a class="nav-link" href="#/gallery/portraits"    id="nlbl-portraits"    onclick="openGal('portraits');return false;">Portraits</a>
+    <a class="nav-link" href="#/gallery/personal"     id="nlbl-personal"     onclick="openGal('personal');return false;">Personal</a>
+    <a class="nav-link" href="#/about"                id="nlbl-about"        onclick="activatePage('about');return false;">About</a>
   </nav>
 
-  <div class="main" id="mainEl">
+  <main class="main" id="mainEl">
 
     <div class="page active" id="page-home">
       <div class="home-page" id="homeWrap">
@@ -240,14 +289,15 @@ html, body {
       <div class="text-page">
         <div class="text-label">Biography</div>
         <div class="text-body">
-          <p>Max Badikov is a London-based documentary photographer, picture editor and photography collector. He works on long-form projects that explore the social landscape. With a background in journalism and experience as a picture editor for leading media, he brings a strong storytelling approach to creating compelling, authentic visuals.</p>
-          <p>Badikov is available for commercial and editorial commissions.</p>
-          <p>For project inquiries or to purchase his work, please reach out via <a href="mailto:studio@badikov.co">email</a>.</p>
+          <p>Max Badikov is a documentary photographer based in London, available for assignments across the United Kingdom and worldwide. His practice centres on long-form documentary and editorial photography — sustained bodies of work exploring social landscapes, communities and everyday life.</p>
+          <p>Alongside his own work, Badikov is a picture editor with experience across news media, and a photography collector who has spent years gathering vernacular and archival images from flea markets and private sources around the world.</p>
+          <p>He shoots across film and digital formats, with a particular interest in black-and-white photography, bringing the same editorial eye — honed selecting images for publication — to his own documentary and portrait work.</p>
+          <p>Badikov is available for commercial and editorial commissions worldwide. For project inquiries, editorial assignments, or to purchase his work or pieces from his collection, please reach out via <a href="mailto:studio@badikov.co">email</a>.</p>
         </div>
       </div>
     </div>
 
-  </div>
+  </main>
 </div>
 
 <script>
@@ -257,6 +307,7 @@ let activeGal = null;
 let projOpen = false;
 let unlockedProjects = {};
 let pendingKey = null;
+const preloadCache = {};
 
 // ─── BOOT ───────────────────────────────
 async function boot() {
@@ -272,6 +323,8 @@ async function boot() {
     }
   }
   buildSite();
+  routeFromHash();
+  window.addEventListener('popstate', routeFromHash);
 }
 
 // ─── FALLBACK MANIFEST ──────────────────
@@ -288,8 +341,15 @@ function buildFallbackManifest() {
     projects: {
       'no-desk-no-gain': {
         title: 'No Desk, No Gain (in progress)',
-        password: true,
-        password_value: 'password123',
+        password: false,
+        about: {
+          title: 'No Desk, No Gain (in progress)',
+          paragraphs: [
+            'No Desk, No Gain is an ongoing documentary project, currently in production.',
+            'This project is self-funded — your support helps keep it going, and every contribution makes a real difference.',
+            { text: 'Support this project', href: 'https://gofund.me/c196c699d' }
+          ]
+        },
         images: flat('No Desk, No Gain', 6)
       },
       'private-histories': {
@@ -319,7 +379,7 @@ function buildSite() {
   if (MANIFEST.cover) {
     const ph = document.getElementById('homePh');
     const img = document.createElement('img');
-    img.src = MANIFEST.cover; img.alt = 'Max Badikov';
+    img.src = MANIFEST.cover; img.alt = 'Max Badikov — documentary photographer, London';
     ph.replaceWith(img);
   }
 
@@ -329,7 +389,7 @@ function buildSite() {
     const proj = MANIFEST.projects[key];
     IDX[key] = 0;
     const a = document.createElement('a');
-    a.className = 'nav-sub-link'; a.href = '#'; a.dataset.gal = key;
+    a.className = 'nav-sub-link'; a.href = '#/gallery/' + key; a.dataset.gal = key;
     a.textContent = proj.title;
     a.addEventListener('click', e => {
       e.preventDefault();
@@ -361,7 +421,7 @@ function buildGalleryPage(container, key, images, about) {
   view.className = 'gal-view'; view.id = 'gv-' + key;
 
   if (images.length > 0) {
-    const img = document.createElement('img'); img.id = 'gi-' + key; img.src = ''; img.alt = '';
+    const img = document.createElement('img'); img.id = 'gi-' + key; img.src = ''; img.alt = ''; img.decoding = 'async';
     view.appendChild(img);
   } else {
     const ph = document.createElement('div'); ph.className = 'gal-ph'; view.appendChild(ph);
@@ -386,7 +446,16 @@ function buildGalleryPage(container, key, images, about) {
     const textWrap = document.createElement('div');
     textWrap.className = 'gal-about-text';
     (about.paragraphs || []).forEach(para => {
-      const p = document.createElement('p'); p.textContent = para; textWrap.appendChild(p);
+      const p = document.createElement('p');
+      if (para && typeof para === 'object' && para.href) {
+        const a = document.createElement('a');
+        a.href = para.href; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = para.text || para.href;
+        p.appendChild(a);
+      } else {
+        p.textContent = para;
+      }
+      textWrap.appendChild(p);
     });
     overlay.appendChild(textWrap);
     wrap.appendChild(overlay);
@@ -422,7 +491,8 @@ function buildGalleryPage(container, key, images, about) {
 
   images.forEach((img, n) => {
     const cell = document.createElement('div'); cell.className = 'index-cell';
-    const i = document.createElement('img'); i.src = img.src; i.alt = img.cap || ''; i.loading = 'lazy';
+    const i = document.createElement('img');
+    i.src = img.src; i.alt = img.cap || altFor(key, img, n); i.loading = 'lazy'; i.decoding = 'async';
     cell.appendChild(i);
     cell.addEventListener('click', () => { IDX[key] = n; showGal(key); });
     grid.appendChild(cell);
@@ -436,53 +506,138 @@ function buildGalleryPage(container, key, images, about) {
   container.appendChild(ip);
 }
 
-// ─── NAVIGATION ─────────────────────────
+// ─── SEO HELPERS ────────────────────────
+function sectionTitle(key) {
+  if (MANIFEST.projects && MANIFEST.projects[key]) return MANIFEST.projects[key].title;
+  const map = { commissioned: 'Commissioned', portraits: 'Portraits', personal: 'Personal' };
+  return map[key] || key;
+}
+function altFor(key, imgData, idx) {
+  if (imgData && imgData.cap) return imgData.cap;
+  return sectionTitle(key) + ' photography by Max Badikov — image ' + (idx + 1);
+}
+
+// ─── ROUTER ─────────────────────────────
+function parseHash() {
+  const h = (location.hash || '').replace(/^#\/?/, '');
+  if (!h) return { type: 'home' };
+  const parts = h.split('/').filter(Boolean);
+  if (parts[0] === 'about') return { type: 'about' };
+  if (parts[0] === 'gallery' && parts[1]) return { type: 'gallery', key: parts[1], n: parts[2] ? parseInt(parts[2], 10) : null };
+  if (parts[0] === 'index' && parts[1]) return { type: 'index', key: parts[1] };
+  return { type: 'home' };
+}
+
+function routeFromHash() {
+  if (!MANIFEST) return;
+  const r = parseHash();
+  if (r.type === 'about') { renderPage('about'); return; }
+  if (r.type === 'gallery' && getImages(r.key).length) {
+    if (r.n && r.n >= 1) IDX[r.key] = r.n - 1;
+    renderGal(r.key);
+    return;
+  }
+  if (r.type === 'index' && document.getElementById('pg-idx-' + r.key)) { renderIndex(r.key); return; }
+  renderHome();
+}
+
+function setRoute(hash, replace) {
+  try {
+    if (replace) history.replaceState(null, '', hash);
+    else history.pushState(null, '', hash);
+  } catch (e) {
+    location.hash = hash.replace(/^#/, '');
+  }
+}
+
+// ─── RENDER (pure — no history writes) ──
 function allOff() { document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); }
 function closeNav() { document.getElementById('siteNav').classList.remove('open'); }
 
-function goHome() {
+function renderHome() {
   allOff(); document.getElementById('page-home').classList.add('active');
   setNavDim(null); activeGal = null; closeNav();
 }
-function activatePage(id) {
+function renderPage(id) {
   allOff(); document.getElementById('page-' + id).classList.add('active');
   setNavDim(id); activeGal = null; closeNav();
 }
-function openGal(key) { IDX[key] = 0; showGal(key); }
-
-function showGal(key) {
+function renderGal(key) {
   if (!MANIFEST) return;
   const imgs = getImages(key);
   allOff();
   const idx = IDX[key] || 0;
-  const imgEl = document.getElementById('gi-' + key);
-  if (imgEl && imgs[idx]) { imgEl.src = imgs[idx].src; imgEl.alt = imgs[idx].cap || ''; }
-  const capEl = document.getElementById('gc-' + key);
-  const numEl = document.getElementById('gn-' + key);
-  if (capEl) capEl.textContent = imgs[idx] ? (imgs[idx].cap || '') : '';
-  if (numEl) numEl.textContent = imgs.length > 1 ? (idx + 1) + ' / ' + imgs.length : '';
-  // hide overlay if visible
+  if (imgs[idx]) setImage(key, imgs[idx], idx);
+  updateCaption(key, idx, imgs);
   const overlay = document.getElementById('overlay-' + key);
   if (overlay) overlay.classList.remove('visible');
   const aboutBtn = document.getElementById('aboutbtn-' + key);
   if (aboutBtn) aboutBtn.textContent = 'About';
   document.getElementById('pg-gal-' + key).classList.add('active');
   activeGal = key; setNavDim(key); closeNav();
+  preloadNeighbors(key, idx, imgs);
 }
-
-function showIndex(key) {
+function renderIndex(key) {
   allOff(); document.getElementById('pg-idx-' + key).classList.add('active'); closeNav();
 }
+
+// ─── NAVIGATE (updates render + history) ─
+function goHome() { renderHome(); setRoute('#/'); }
+function activatePage(id) { renderPage(id); setRoute('#/' + id); }
+function openGal(key) { IDX[key] = 0; showGal(key); }
+function showGal(key) {
+  renderGal(key);
+  setRoute('#/gallery/' + key + '/' + ((IDX[key] || 0) + 1));
+}
+function showIndex(key) { renderIndex(key); setRoute('#/index/' + key); }
 
 function galStep(key, dir) {
   const imgs = getImages(key); if (!imgs.length) return;
   IDX[key] = (IDX[key] + dir + imgs.length) % imgs.length;
-  const imgEl = document.getElementById('gi-' + key);
+  const idx = IDX[key];
+  setImage(key, imgs[idx], idx);
+  updateCaption(key, idx, imgs);
+  setRoute('#/gallery/' + key + '/' + (idx + 1), true);
+  preloadNeighbors(key, idx, imgs);
+}
+
+function updateCaption(key, idx, imgs) {
   const capEl = document.getElementById('gc-' + key);
   const numEl = document.getElementById('gn-' + key);
-  if (imgEl) imgEl.src = imgs[IDX[key]].src;
-  if (capEl) capEl.textContent = imgs[IDX[key]].cap || '';
-  if (numEl) numEl.textContent = (IDX[key] + 1) + ' / ' + imgs.length;
+  if (capEl) capEl.textContent = imgs[idx] ? (imgs[idx].cap || '') : '';
+  if (numEl) numEl.textContent = imgs.length > 1 ? (idx + 1) + ' / ' + imgs.length : '';
+}
+
+// ─── IMAGE LOADING (crossfade + preload) ─
+function setImage(key, imgData, idx) {
+  const imgEl = document.getElementById('gi-' + key);
+  if (!imgEl || !imgData) return;
+  imgEl.style.opacity = '0';
+  const loader = new Image();
+  loader.decoding = 'async';
+  loader.onload = () => {
+    imgEl.src = imgData.src;
+    imgEl.alt = altFor(key, imgData, idx);
+    requestAnimationFrame(() => { imgEl.style.opacity = '1'; });
+  };
+  loader.onerror = () => {
+    imgEl.src = imgData.src;
+    imgEl.alt = altFor(key, imgData, idx);
+    imgEl.style.opacity = '1';
+  };
+  loader.src = imgData.src;
+}
+
+function preloadNeighbors(key, idx, imgs) {
+  if (!imgs || imgs.length < 2) return;
+  [idx - 1, idx + 1].forEach(i => {
+    const wrapped = ((i % imgs.length) + imgs.length) % imgs.length;
+    const src = imgs[wrapped] && imgs[wrapped].src;
+    if (src && !preloadCache[src]) {
+      const im = new Image(); im.decoding = 'async'; im.src = src;
+      preloadCache[src] = im;
+    }
+  });
 }
 
 function getImages(key) {
