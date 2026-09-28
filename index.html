@@ -77,7 +77,7 @@ html, body {
 }
 .nav-title a { color: #000; text-decoration: none; }
 
-/* top-level sections: Projects / Commissioned / Portraits / Personal / About */
+/* top-level sections: Projects / Commissioned / Portraits / About */
 .nav-link {
   font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
   color: #000; text-decoration: none; display: block; line-height: 2.3;
@@ -294,7 +294,6 @@ html, body {
     <div class="nav-sub" id="projects-sub"></div>
     <a class="nav-link" href="/gallery/commissioned" id="nlbl-commissioned" onclick="openGal('commissioned');return false;">Commissioned</a>
     <a class="nav-link" href="/gallery/portraits"    id="nlbl-portraits"    onclick="openGal('portraits');return false;">Portraits</a>
-    <a class="nav-link" href="/gallery/personal"     id="nlbl-personal"     onclick="openGal('personal');return false;">Personal</a>
     <a class="nav-link" href="/about"                id="nlbl-about"        onclick="activatePage('about');return false;">About</a>
   </nav>
 
@@ -411,11 +410,21 @@ function buildFallbackManifest() {
           ]
         },
         images: flat('Private Histories', 6)
+      },
+      'once-familiar': {
+        title: 'Once Familiar',
+        password: false,
+        about: {
+          title: 'Once Familiar',
+          paragraphs: [
+            'Once Familiar brings together photographs made across different parts of Russia between 2018 and 2022. The project grew from an ongoing practice of observing streets, landscapes, and everyday life. After leaving Russia, these images became a record of a place once familiar, seen now from a distance.'
+          ]
+        },
+        images: flat('Once Familiar', 13)
       }
     },
     commissioned: flat('Commissioned', 4),
     portraits:    flat('Portrait', 6),
-    personal:     flat('Personal', 5),
     cover: null
   };
 }
@@ -449,7 +458,7 @@ function buildSite() {
   });
 
   // Flat galleries
-  ['commissioned','portraits','personal'].forEach(key => {
+  ['commissioned','portraits'].forEach(key => {
     IDX[key] = 0;
     buildGalleryPage(mainEl, key, MANIFEST[key] || [], null);
   });
@@ -611,7 +620,7 @@ function attachSwipe(view, key) {
 // ─── SEO HELPERS ────────────────────────
 function sectionTitle(key) {
   if (MANIFEST.projects && MANIFEST.projects[key]) return MANIFEST.projects[key].title;
-  const map = { commissioned: 'Commissioned', portraits: 'Portraits', personal: 'Personal' };
+  const map = { commissioned: 'Commissioned', portraits: 'Portraits' };
   return map[key] || key;
 }
 function altFor(key, imgData, idx) {

@@ -156,6 +156,70 @@
           "cap": ""
         }
       ]
+    },
+    "once-familiar": {
+      "title": "Once Familiar",
+      "password": false,
+      "about": {
+        "title": "Once Familiar",
+        "paragraphs": [
+          "Once Familiar brings together photographs made across different parts of Russia between 2018 and 2022. The project grew from an ongoing practice of observing streets, landscapes, and everyday life. After leaving Russia, these images became a record of a place once familiar, seen now from a distance."
+        ]
+      },
+      "images": [
+        {
+          "src": "images/projects/once-familiar/001.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/002.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/003.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/004.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/005.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/006.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/007.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/008.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/009.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/010.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/011.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/012.jpeg",
+          "cap": ""
+        },
+        {
+          "src": "images/projects/once-familiar/013.jpeg",
+          "cap": ""
+        }
+      ]
     }
   },
   "commissioned": [
@@ -211,60 +275,6 @@
     },
     {
       "src": "images/portraits/012.jpeg",
-      "cap": ""
-    }
-  ],
-  "personal": [
-    {
-      "src": "images/personal/001.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/002.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/003.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/004.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/005.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/006.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/007.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/008.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/009.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/010.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/011.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/012.jpeg",
-      "cap": ""
-    },
-    {
-      "src": "images/personal/013.jpeg",
       "cap": ""
     }
   ],

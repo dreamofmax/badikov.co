@@ -21,17 +21,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://badikov.co/gallery/personal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://badikov.co/gallery/private-histories</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://badikov.co/gallery/no-desk-no-gain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://badikov.co/gallery/once-familiar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
