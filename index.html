@@ -238,6 +238,11 @@ html, body {
 .text-body p { font-size: 12.5px; line-height: 1.78; color: #222; max-width: 600px; margin: 0 auto 13px; }
 .text-body a { color: #000; }
 
+/* dated lists (Academic History, Exhibitions, Awards, Publications): year column + aligned text */
+.text-body.entries { width: min(520px, 100%); text-align: left; }
+.text-body.entries p { display: grid; grid-template-columns: 4.25em 1fr; max-width: none; margin: 0 0 13px; }
+.text-body.entries .yr { font-variant-numeric: tabular-nums; }
+
 /* ── PASSWORD MODAL ── */
 .pw-modal {
   display: none; position: fixed; inset: 0;
@@ -334,32 +339,34 @@ html, body {
         </div>
 
         <div class="text-label">Academic History</div>
-        <div class="text-body">
-          <p>2024, Film and Television School, Journalism</p>
-          <p>2022, Docdocdoc, Documentary Photography</p>
+        <div class="text-body entries">
+          <p><span class="yr">2024</span> <span>Film and Television School, Journalism</span></p>
+          <p><span class="yr">2022</span> <span>Docdocdoc, Documentary Photography</span></p>
         </div>
 
         <div class="text-label">Group Exhibitions</div>
-        <div class="text-body">
-          <p>2024, FRAME, Blure, Tbilisi</p>
-          <p>2024, Arthereistanbul, The Things I Leave Behind, Istanbul</p>
-          <p>2024, Kofevar, Human, Tbilisi</p>
+        <div class="text-body entries">
+          <p><span class="yr">2026</span> <span>Memories, Carlotta Gallery, United Kingdom</span></p>
+          <p><span class="yr">2024</span> <span>FRAME, Blure, Tbilisi, Georgia</span></p>
+          <p><span class="yr">2024</span> <span>The Things I Leave Behind, Arthere Istanbul, Istanbul, Turkey</span></p>
+          <p><span class="yr">2024</span> <span>Human, Kofevar, Tbilisi, Georgia</span></p>
         </div>
 
         <div class="text-label">Awards</div>
-        <div class="text-body">
-          <p>2022, PHACT, Winner</p>
-          <p>2021, Monochrome Awards, Honorable Mention</p>
+        <div class="text-body entries">
+          <p><span class="yr">2022</span> <span>PHACT, Winner</span></p>
+          <p><span class="yr">2021</span> <span>Monochrome Awards, Honorable Mention</span></p>
         </div>
 
         <div class="text-label">Publications</div>
-        <div class="text-body">
-          <p>2024, London Cult, The Prospects of Developing Monochromatic Expression in Contemporary Photography</p>
-          <p>2024, Syg.ma, "Nature's Canvas: Contemporary Perspectives" Art Exhibition</p>
-          <p>2023, Artservatory, Healing Canvases: Exploring the Dimensions of Art Therapy in Contemporary Art Practice</p>
-          <p>2023, Art MUSE Magazine, Exploring Contemporary Creative Method: Convergence of Space, Time, and Meaning</p>
-          <p>2020, Little River Magazine</p>
-          <p>2020, 35mm Magazine</p>
+        <div class="text-body entries">
+          <p><span class="yr">2026</span> <span>Issue No. 5, Zoom Out Magazine</span></p>
+          <p><span class="yr">2024</span> <span>The Prospects of Developing Monochromatic Expression in Contemporary Photography, London Cult</span></p>
+          <p><span class="yr">2024</span> <span>Nature's Canvas: Contemporary Perspectives, Syg.ma</span></p>
+          <p><span class="yr">2023</span> <span>Healing Canvases: Exploring the Dimensions of Art Therapy in Contemporary Art Practice, Artservatory</span></p>
+          <p><span class="yr">2023</span> <span>Exploring Contemporary Creative Method: Convergence of Space, Time, and Meaning, Art Muse Magazine</span></p>
+          <p><span class="yr">2020</span> <span>Little River Magazine</span></p>
+          <p><span class="yr">2020</span> <span>35mm Magazine</span></p>
         </div>
       </div>
     </div>
