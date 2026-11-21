@@ -243,6 +243,15 @@ html, body {
 .text-body.entries p { display: grid; grid-template-columns: 4.25em 1fr; max-width: none; margin: 0 0 13px; }
 .text-body.entries .yr { font-variant-numeric: tabular-nums; }
 
+/* About page links (email, Download CV) — plain text, dotted underline, no buttons */
+#page-about a {
+  color: #222; text-decoration: underline dotted #777;
+  text-decoration-thickness: 1px; text-underline-offset: 4px;
+  transition: color .2s;
+}
+#page-about a:hover, #page-about a:focus-visible { color: #999; }
+.cv-link { margin-top: 34px; font-size: 12.5px; line-height: 1.78; }
+
 /* ── PASSWORD MODAL ── */
 .pw-modal {
   display: none; position: fixed; inset: 0;
@@ -368,6 +377,8 @@ html, body {
           <p><span class="yr">2020</span> <span>Little River Magazine</span></p>
           <p><span class="yr">2020</span> <span>35mm Magazine</span></p>
         </div>
+
+        <a class="cv-link" href="cv.pdf" download="Max-Badikov-CV.pdf">Download CV (PDF)</a>
       </div>
     </div>
 
